@@ -1,0 +1,2 @@
+TODO: Task 1 - Write the mongo import command here
+mongoimport c:\downloads\csf-assessment-template\restaurants.json -d local -c restaurants --drop

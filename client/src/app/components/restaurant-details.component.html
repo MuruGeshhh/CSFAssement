@@ -1,0 +1,89 @@
+
+<h2>Name: {{name}} </h2>
+<br>
+<h2>Cuisine: {{cuisine}} </h2>
+<br>
+<h2>Address: {{address}} </h2>
+
+<div class="box-it">
+<form [formGroup]="comment" (ngSubmit)="submitComment()">
+
+    <table>
+<tr>
+     <td> <label for="name">Name:</label> </td>
+    <td>
+        <input type="text" size="50" minlength="4" id="name" placeholder="placeholder" formControlName="name">
+    </td>
+
+</tr>
+
+<tr>
+
+    <td>
+
+        <label for="rating">Rating:</label>
+          <select name="rating" id="rating">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+
+         </select>
+    </td>
+     
+</tr>
+
+<tr>
+
+    <td><label for="Text"></label></td>
+        <td>
+          <textarea id="Text" cols="40" rows="5" formControlName="text" placeholder="Type here"></textarea>
+        </td>
+
+
+
+</tr>
+
+<td>
+  <td>
+
+    <a [routerLink]="['api/:cuisine/restraunts']"><button type="button">Back</button></a>
+
+
+  </td>
+
+  <td>
+      <button type="button" class="ml-10px" (click)="submitComment()" [disabled]="comment.get('name')?.hasError('required') || comment.get('Text')?.hasError('Text')">
+        Submit
+      </button>
+  </td>
+
+
+
+
+</td>
+
+
+
+
+
+
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+</div>
