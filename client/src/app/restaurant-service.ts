@@ -56,10 +56,10 @@ export class RestaurantService {
 	// TODO Task 5
 	// Use this method to submit a comment
 	// DO NOT CHANGE THE METHOD'S NAME OR SIGNATURE
-	public postComment(comment: Comment): Promise<any> {
+//	public postComment(comment: Comment): Promise<any> {
 		// Implememntation in here
 
-	}
+//	}
 }
 
 
