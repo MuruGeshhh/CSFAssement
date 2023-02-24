@@ -3,9 +3,11 @@ package vttp2022.csf.assessment.server.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import jakarta.json.JsonObject;
 import vttp2022.csf.assessment.server.models.Comment;
 import vttp2022.csf.assessment.server.models.Restaurant;
 //import vttp2022.csf.assessment.server.repositories.MapCache;
@@ -68,6 +70,19 @@ public class RestaurantService {
 		// Implmementation in here
 		
 	}
+
+
+	
+
+    public static Restaurant create(Document doc) {
+        Restaurant r = new Restaurant();
+        r.setRestaurantId(doc.getString("restaurantId"));
+        r.setName(doc.getString("name"));
+		r.setCuisine(doc.getString("cuisine"));
+        r.setMapURL(doc.getString("mapUrl"));
+         return r;
+    }
+
 	//
 	// You may add other methods to this class
 }

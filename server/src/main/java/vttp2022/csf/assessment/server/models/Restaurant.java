@@ -58,6 +58,17 @@ public class Restaurant {
 	}
 
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public JsonObject toJson() {
         return Json.createObjectBuilder()
             .add("restaurantId", restaurantId)
@@ -69,15 +80,7 @@ public class Restaurant {
             .build();
     }
 
-    public static Restaurant create(Document doc) {
-        Restaurant r = new Restaurant();
-        r.setRestaurantId(doc.getString("restaurantId"));
-        r.setName(doc.getString("name"));
-		r.setCuisine(doc.getString("cuisine"));
-        r.setMapURL(doc.getString("mapUrl"));
-         return r;
-    }
-
+   
 	
 
 
